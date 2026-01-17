@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Return Comment to Stack Overflow",
+  "version": "1.0.0",
+  "description": "Updates Stack Overflow comment timestamps to readable date format",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Return Comment to Stack Overflow"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://stackoverflow.com/*", "*://*.stackoverflow.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
